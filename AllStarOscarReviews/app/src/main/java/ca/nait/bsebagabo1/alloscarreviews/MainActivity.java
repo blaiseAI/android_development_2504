@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Preference Selected", Toast.LENGTH_SHORT).show();
                 return  true;
             case R.id.menu_view_reviews:
+                Intent intentView = new Intent(this,ViewReviewsActivity.class);
+                this.startActivity(intentView);
                 Toast.makeText(this, "View Reviews Selected", Toast.LENGTH_SHORT).show();
                 return  true;
 

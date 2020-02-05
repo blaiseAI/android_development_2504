@@ -2,6 +2,7 @@
     <string name="app_name">All Stars Oscar Reviews</string>
     <string name="edit_text_hint">Type message here</string>
     <string name="post_category_text_Title">Oscar category</string>
+    <string name="post_category_view_text_Title">Reviews By category</string>
     <string name="post_edit_nominee_text_Title">Nominee</string>
     <string name="post_edit_nominee_hint">Type Nominee here</string>
     <string name="post_edit_review_hint">Type Review here</string>
@@ -21,4 +22,14 @@
     <string name="category_best_actress">Best Actress</string>
     <string name="category_film_editing">Film Editing</string>
     <string name="category_visual_effects">Visual Effects</string>
+    <string name="category_prompt">Choose a Category</string>
+
+    <!--    This is a spinner for view category by type-->
+    <string-array name="category_arrays">
+        <item>Best Picture</item>
+        <item>Best Actor</item>
+        <item>Best Actress</item>
+        <item>Film Editing</item>
+        <item>Visual Effects</item>
+    </string-array>
 </resources>
