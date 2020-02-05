@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="color_send_title">#990000</color>
+    <color name="color_send_bg">#DBA4A4</color>
+    <color name="color_edit_text_bg">#F4F4F4</color>
+    <color name="color_view_title">#009999</color>
+    <color name="color_view_bg">#A1E2E2</color>
+    <color name="color_text_view_bg">#cecece</color>
+    <color name="color_text_view_text">#009999</color>
+    <color name="color_divider">#FFFFFF00</color>
+
+
+    <color name="colorWhiteText">#FFF</color>
+    <color name="gray">#253A4B</color>
+    <color name="red">#F23B5F</color>
+
+</resources>

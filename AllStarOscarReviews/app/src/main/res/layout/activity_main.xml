@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    android:id="@+id/linear_layout_main">
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textSize="30sp"
+     android:textColor="@color/colorAccent"
+     android:text="@string/post_category_text_Title"/>
+ <LinearLayout
+     android:id="@+id/linearLayout2"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+  <RadioGroup
+      android:id="@+id/Categories"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+   <RadioButton
+       android:id="@+id/category_best_picture"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/category_best_picture"
+       android:textSize="20sp" />
+
+   <RadioButton
+       android:id="@+id/category_best_actor"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/category_best_actor"
+       android:textSize="20sp" />
+
+   <RadioButton
+       android:id="@+id/category_best_actress"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/category_best_actress"
+       android:textSize="20sp" />
+
+   <RadioButton
+       android:id="@+id/category_best_editing"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/category_film_editing"
+       android:textSize="20sp" />
+
+   <RadioButton
+       android:id="@+id/category_best_visual_effects"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/category_visual_effects"
+       android:textSize="20sp" />
+  </RadioGroup>
+ </LinearLayout>
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textSize="30sp"
+     android:layout_marginTop="10dp"
+     android:textColor="@color/colorAccent"
+     android:text="@string/post_edit_nominee_text_Title"/>
+
+ <EditText
+     android:id="@+id/post_nominee"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@drawable/edit_round"
+     android:drawablePadding="10dp"
+     android:drawableLeft="@drawable/ic_person_black_24dp"
+     android:padding="20dp"
+     android:hint="@string/post_edit_nominee_hint" />
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textSize="30sp"
+     android:layout_marginTop="10dp"
+     android:textColor="@color/colorAccent"
+     android:text="@string/post_edit_review_text_Title"/>
+
+ <EditText
+     android:id="@+id/post_review"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@drawable/edit_round"
+     android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
+     android:padding="20dp"
+     android:drawablePadding="10dp"
+     android:hint="@string/post_edit_review_hint" />
+ <Button
+     android:id="@+id/post_btn"
+     android:layout_width="fill_parent"
+     android:layout_gravity="center_horizontal"
+     android:background="@drawable/button_round"
+     android:padding="25dp"
+     android:textColor="@color/colorWhiteText"
+     android:layout_marginTop="30dp"
+     android:textAllCaps="false"
+     android:drawableLeft="@drawable/ic_send_black_24dp"
+     android:layout_height="wrap_content"
+     android:text="@string/post_btn"/>
+
+</LinearLayout>

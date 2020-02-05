@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">All Stars Oscar Reviews</string>
+    <string name="edit_text_hint">Type message here</string>
+    <string name="post_category_text_Title">Oscar category</string>
+    <string name="post_edit_nominee_text_Title">Nominee</string>
+    <string name="post_edit_nominee_hint">Type Nominee here</string>
+    <string name="post_edit_review_hint">Type Review here</string>
+    <string name="post_edit_review_text_Title">Review</string>
+    <string name="post_btn">Submit Review</string>
+    <string name="list_view_empty_text">No Reviews available</string>
+    <string name="preference_user_name">User name</string>
+    <string name="preference_user_name_summary">Use this to change or set your alias</string>
+    <string name="preference_url">URL</string>
+    <string name="preference_url_summary">Use this to change the url</string>
+    <string name="preference_user_password_title">Password</string>
+    <string name="preference_user_password_summary">Use this to set or change your password</string>
+    <string name="preference_user_bg_color_title">Main Background Color</string>
+    <string name="preference_user_bg_color_summary">Set the Main background color(#RRGGBB)</string>
+    <string name="category_best_picture">Best Actor</string>
+    <string name="category_best_actor">Best Actor</string>
+    <string name="category_best_actress">Best Actress</string>
+    <string name="category_film_editing">Film Editing</string>
+    <string name="category_visual_effects">Visual Effects</string>
+</resources>
