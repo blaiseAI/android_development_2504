@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key)
     {
-        String  bgColor = prefs.getString("preference_background", "#990000");
+        String  bgColor = prefs.getString("preference_main_bg_color", "#990000");
         mainView.setBackgroundColor(Color.parseColor(bgColor));
     }
 }

@@ -15,9 +15,12 @@
     android:password="true"
     android:summary="@string/preference_user_password_summary"
     android:title="@string/preference_user_password_title" />;
-    <EditTextPreference
-        android:key="preference_background"
-        android:summary="@string/preference_user_bg_color_summary"
-        android:title="@string/preference_user_bg_color_title"/>
+
+    <ListPreference
+        android:key="preference_main_bg_color"
+        android:title="@string/preference_user_bg_color_title"
+        android:entries="@array/color_names"
+        android:entryValues="@array/color_values"
+        android:summary="@string/preference_user_bg_color_summary"/>
 
 </PreferenceScreen>
