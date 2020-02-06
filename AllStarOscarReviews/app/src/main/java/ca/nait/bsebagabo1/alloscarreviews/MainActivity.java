@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.menu_preferences:
                 Intent intent = new Intent(this, PrefsActivity.class);
                 this.startActivity(intent);
-                Toast.makeText(this, "Preference Selected", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Preference Selected", Toast.LENGTH_SHORT).show();
                 return  true;
             case R.id.menu_view_reviews:
                 Intent intentView = new Intent(this,ViewReviewsActivity.class);
                 this.startActivity(intentView);
-                Toast.makeText(this, "View Reviews Selected", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "View Reviews Selected", Toast.LENGTH_SHORT).show();
                 return  true;
 
         }
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 category = categoryParameter.split(" ")[1].toLowerCase();
                 postToSever(review,userName,nominee, category, password);
 
-                Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
 
 
             }

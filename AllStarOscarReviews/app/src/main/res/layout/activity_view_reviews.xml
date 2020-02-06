@@ -30,4 +30,21 @@
             android:prompt="@string/category_prompt" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_edit_text_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+<!--    <ListView-->
+<!--        android:id="@+id/list_view_custom"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:background="@color/color_edit_text_bg"-->
+<!--        android:layout_height="fill_parent"/>-->
+
 </LinearLayout>
