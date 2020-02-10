@@ -49,8 +49,12 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
     {
         String queryParameter = parent.getItemAtPosition(position).toString().split(" ")[1].toLowerCase();
-        // Pass the text to the getFromServer method for a parameter request
-        displayChatter(queryParameter);
+        if(queryParameter.contains("picture")){
+            displayChatter("film");
+        }
+        else{
+            displayChatter(queryParameter);
+        }
         //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
