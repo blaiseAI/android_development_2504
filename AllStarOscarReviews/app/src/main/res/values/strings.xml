@@ -17,12 +17,14 @@
     <string name="preference_user_password_summary">Use this to set or change your password</string>
     <string name="preference_user_bg_color_title">Main Background Color</string>
     <string name="preference_user_bg_color_summary">Set the Main background color(#RRGGBB)</string>
-    <string name="category_best_picture">Best Actor</string>
+    <string name="category_best_picture">Best Picture</string>
     <string name="category_best_actor">Best Actor</string>
     <string name="category_best_actress">Best Actress</string>
     <string name="category_film_editing">Film Editing</string>
     <string name="category_visual_effects">Visual Effects</string>
     <string name="category_prompt">Choose a Category</string>
+    <string name="text_view_custom_row_Reviewer"></string>
+
 
     <!--    This is a spinner for view category by type-->
     <string-array name="category_arrays">
@@ -32,4 +34,5 @@
         <item>Film Editing</item>
         <item>Visual Effects</item>
     </string-array>
+    <string name="title_activity_custom_row">custom_row</string>
 </resources>

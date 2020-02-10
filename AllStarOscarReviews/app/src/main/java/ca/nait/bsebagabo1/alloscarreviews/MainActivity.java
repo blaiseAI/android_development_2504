@@ -115,10 +115,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // find the radiobutton by returned id
                 category_Value = (RadioButton) findViewById(selectedId);
                 String categoryParameter = category_Value.getText().toString();
-                category = categoryParameter.split(" ")[1].toLowerCase();
+                category = categoryParameter.equalsIgnoreCase("Best Picture") ? "Best Film".split(" ")[1].toLowerCase():categoryParameter.split(" ")[1].toLowerCase();
+//                category = categoryParameter.split(" ")[1].toLowerCase();
                 postToSever(review,userName,nominee, category, password);
 
-                //Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
 
 
             }
