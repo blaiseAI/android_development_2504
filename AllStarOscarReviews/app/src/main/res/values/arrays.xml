@@ -2,10 +2,14 @@
 <resources>
     <string-array name="color_names">
         <item name= "red">Red</item>
+        <item name= "white">White</item>
         <item name= "Blue">Blue</item>
+        <item name= "Dblue">Dark Blue</item>
     </string-array>
     <string-array name="color_values">
         <item name="red">#990000</item>
+        <item name="white">#FFFFFF</item>
         <item name="red">#062553</item>
+        <item name="Dblue">#253A4B</item>
     </string-array>
 </resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".SplashScreenActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_welcome_Screen_Title"
+            android:textColor="@color/colorWhiteText"
+            android:textStyle="bold"
+            android:textSize="42sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_welcome_Screen_Tag_line"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="#F4F4F4"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_oscar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center_vertical"
+        android:text="Loading ..."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhiteText"
+        android:textSize="20sp" />
+</RelativeLayout>

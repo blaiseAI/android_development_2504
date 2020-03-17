@@ -118,8 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 category = categoryParameter.equalsIgnoreCase("Best Picture") ? "Best Film".split(" ")[1].toLowerCase():categoryParameter.split(" ")[1].toLowerCase();
 //                category = categoryParameter.split(" ")[1].toLowerCase();
                 postToSever(review,userName,nominee, category, password);
-
-                Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
+                nomineeText.setText("");
+                reviewText.setText("");
+                //Toast.makeText(this, "You selected: "+category+" "+nominee+" "+review+"Username:"+userName+"Password:"+password, Toast.LENGTH_LONG).show();
 
 
             }
@@ -143,6 +144,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(formParameters);
             httpPost.setEntity(formEntity);
             client.execute(httpPost);
+            review = "";
+            nominee = "";
         }
         catch (Exception e){
             Toast.makeText(this, "Error:"+ e, Toast.LENGTH_SHORT).show();

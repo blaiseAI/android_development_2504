@@ -23,7 +23,9 @@
     <string name="category_film_editing">Film Editing</string>
     <string name="category_visual_effects">Visual Effects</string>
     <string name="category_prompt">Choose a Category</string>
-    <string name="text_view_custom_row_Reviewer"></string>
+<!--    <string name="text_view_custom_row_Reviewer"></string>-->
+    <string name="text_welcome_Screen_Title">Welcome!</string>
+    <string name="text_welcome_Screen_Tag_line">All Star Award Reviews!</string>
 
 
     <!--    This is a spinner for view category by type-->

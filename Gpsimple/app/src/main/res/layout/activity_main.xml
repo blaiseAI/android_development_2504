@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_home_lat"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:background="#E91E63"
+        />
+    <TextView
+        android:id="@+id/tv_home_long"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:background="#673AB7"
+        />
+    <TextView
+        android:id="@+id/tv_current_lat"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:background="#3F51B5"
+        />
+    <TextView
+        android:id="@+id/tv_current_lon"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:background="#FF9800"
+        />
+
+    <TextView
+        android:id="@+id/tv_meters"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:background="#4CAF50"
+        />
+
+</LinearLayout>

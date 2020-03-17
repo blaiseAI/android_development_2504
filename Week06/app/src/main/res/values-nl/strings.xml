@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Klapperen</string>
+    <string name="text_main_title">Begin met Praten</string>
+    <string name="text_display_title">Bekijk Berichten</string>
+    <string name="text_button_send">Bericht Versturen</string>
+    <string name="text_send_chat_hint">Type bericht hier</string>
+    <string name="menu_item_view_preferences">Voorkeuren</string>
+    <string name="menu_item_display_chatter">Bekijk Berichten</string>
+    <string name="menu_item_view_cursor">View Cursor</string>
+    <string name="menu_item_home">Home</string>
+    <string name="menu_item_start_service">Ga Online</string>
+    <string name="menu_item_stop_service">Ga Offline</string>
+    <string name="preference_key_login_name">user_login_name</string>
+    <string name="preference_title_login_name">Gebruikersnaam</string>
+    <string name="preference_summary_login_name">Gebruik dit om uw gebruikersnaam in te stellen</string>
+</resources>

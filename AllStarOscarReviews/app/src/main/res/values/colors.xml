@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#253A4B</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-
     <color name="x">#990000</color>
-
     <color name="color_send_title">#990000</color>
     <color name="color_send_bg">#DBA4A4</color>
     <color name="color_edit_text_bg">#F4F4F4</color>

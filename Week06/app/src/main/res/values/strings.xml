@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Chatter Week 06</string>
+    <string name="text_main_title">Start Chatting</string>
+    <string name="text_display_title">Display Chatter</string>
+    <string name="text_button_send">Post Chat</string>
+    <string name="text_send_chat_hint">Type chat here</string>
+    <string name="menu_item_view_preferences">Preferences</string>
+    <string name="menu_item_view_cursor">View Cursor</string>
+    <string name="menu_item_home">Home</string>
+    <string name="menu_item_start_service">Go Online</string>
+    <string name="menu_item_stop_service">Go Offline</string>
+    <string name="menu_item_display_chatter">Display Chatter</string>
+    <string name="preference_key_login_name">user_login_name</string>
+    <string name="preference_title_login_name">Alias</string>
+    <string name="preference_summary_login_name">Use this to set or modify your Chatter Alias</string>
+
+</resources>

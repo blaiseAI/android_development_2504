@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_home"
+        android:title="@string/menu_item_home" />
+
+    <item
+        android:id="@+id/menu_item_display_chatter"
+        android:title="@string/menu_item_display_chatter" />
+    <item
+        android:id="@+id/menu_item_view_cursor"
+        android:title="@string/menu_item_view_cursor" />
+    <item
+        android:id="@+id/menu_item_toggle_service"
+        android:title="@string/menu_item_start_service" />
+    <item
+        android:id="@+id/menu_item_view_preferences"
+        android:title="@string/menu_item_view_preferences" />
+</menu>

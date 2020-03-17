@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Todo or Not</string>
+    <string name="app_text_view_Heading">Today</string>
+    <string name="app_Edit_Text_Hint_ListName">Enter List Name</string>
+</resources>

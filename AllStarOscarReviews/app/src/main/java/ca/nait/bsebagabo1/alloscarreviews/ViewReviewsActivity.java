@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -29,6 +30,9 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
     /***
      * Code Bellow is to be implemented if using customList with row
      */
+    private ImageButton btnGoHome;
+    // Todo
+    //  Implement the on click btn to go home
     ArrayList<HashMap<String, String>> chatter = new ArrayList<>();
     //public static final String REVIEWER = "username";
     //public static final String REVIEW = "text";
@@ -38,6 +42,8 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_reviews);
+        /* Add listener for the button*/
+        addListenerOnButton();
         /* Create a spinner */
         Spinner spinner = findViewById(R.id.spinnerCategory);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category_arrays, android.R.layout.simple_spinner_item);
@@ -45,6 +51,21 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
     }
+
+    // Listener Method for the go back home btn
+    private void addListenerOnButton()
+    {
+        btnGoHome = (ImageButton) findViewById(R.id.back_home_btn);
+        btnGoHome.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v)
+            {
+//                Toast.makeText(ViewReviewsActivity.this, "ImageButton is clicked!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
     {
@@ -55,6 +76,8 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
         else{
             displayChatter(queryParameter);
         }
+        // Pass the text to the getFromServer method for a parameter request
+
         //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
@@ -73,7 +96,7 @@ public class ViewReviewsActivity extends AppCompatActivity implements AdapterVie
         // Create an endPoint variable
         String Url= "http://www.youcode.ca/Lab01Servlet?CATEGORY=";
         String uriEndPoint = Url + para;
-        Toast.makeText(this, "Message "+uriEndPoint+ " from the getFromServer Method", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Message "+uriEndPoint+ " from the getFromServer Method", Toast.LENGTH_SHORT).show();
         BufferedReader in = null;
         try{
             HttpClient client = new DefaultHttpClient();
