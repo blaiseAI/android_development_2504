@@ -172,15 +172,177 @@ public class MyDBHandler extends SQLiteOpenHelper
      * @return
      */
     public List<ListItem> getAllItemByTitle(String title_name){
+        List<ListItem> todos = new ArrayList<ListItem>();
+        String selectQuery = "SELECT  * FROM " + TABLE_ITEM + " td, "
+                + TABLE_TITLE + " tg, " + TABLE_ITEM_TITLE + " tt WHERE tg."
+                + KEY_LIST_NAME + " = '" + title_name + "'" + " AND tg." + KEY_ID
+                + " = " + "tt." + KEY_TITLE_ID + " AND td." + KEY_ID + " = "
+                + "tt." + KEY_ITEM_ID;
+        Log.e(LOG, selectQuery);
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                ListItem li = new ListItem();
+                li.setId(c.getInt((c.getColumnIndex(KEY_ID))));
+                li.setListItemContent((c.getString(c.getColumnIndex(KEY_ITEM_CONTENT))));
+                li.setCreated_at(c.getString(c.getColumnIndex(KEY_CREATED_AT)));
+
+                // adding to item list
+                todos.add(li);
+            } while (c.moveToNext());
+        }
+        return todos;
+    }
+
+    /**
+     * Updating List Item
+     * @param todo
+     * @return
+     */
+    public int updateTodoItem(ListItem todo){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_ITEM_CONTENT, todo.getListItemContent());
+        values.put(KEY_STATUS, todo.getStatus());
+
+        // updating row
+        return db.update(TABLE_ITEM, values, KEY_ID + " = ?",
+                new String[] { String.valueOf(todo.getId()) });
 
     }
 
 
+    /**
+     * Deleting a TODO_ITEM
+     * @param item_id
+     */
+    public void deleteTodoItem(long item_id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_ITEM, KEY_ID + " = ?",
+                new String[] { String.valueOf(item_id) });
+    }
+
+    public long createTitle(ListTitle tag){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_LIST_NAME, tag.getList_name());
+        values.put(KEY_CREATED_AT, getDateTime());
+
+        // insert row
+        return db.insert(TABLE_TITLE, null, values);
+    }
+
+    /**
+     * Get all title tags
+     * @return
+     */
+    public List<ListTitle> getAllTitleTags(){
+        List<ListTitle> tags = new ArrayList<>();
+        String selectQuery = "SELECT * FROM "+ TABLE_TITLE;
+        Log.e(LOG, selectQuery);
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                ListTitle t = new ListTitle();
+                t.setId(c.getInt((c.getColumnIndex(KEY_ID))));
+                t.setList_name(c.getString(c.getColumnIndex(KEY_LIST_NAME)));
+
+                // adding to tags list
+                tags.add(t);
+            } while (c.moveToNext());
+        }
+        return tags;
+    }
+
+    /**
+     * Updating List tag
+     * @param tag
+     * @return
+     */
+
+    public int updateTitleTag(ListTitle tag){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_LIST_NAME, tag.getList_name());
+        // updating row
+        return db.update(TABLE_TITLE, values, KEY_ID + " = ?",
+                new String[] { String.valueOf(tag.getId()) });
+    }
+
+    public void deleteTitleTag(ListTitle tag, boolean should_delete_all_title_items){
+        SQLiteDatabase db = this.getWritableDatabase();
+        // before deleting title tag
+        // check if item under this title should also be deleted
+        if (should_delete_all_title_items) {
+            // get all todos under this tag
+            List<ListItem> allTagToDos = getAllItemByTitle(tag.getList_name());
+
+            // delete all todos
+            for (ListItem todo : allTagToDos) {
+                // delete todo_item
+                deleteTodoItem(todo.getId());
+            }
+        }
+
+        // now delete the tag
+        db.delete(TABLE_TITLE, KEY_ID + " = ?",
+                new String[] { String.valueOf(tag.getId()) });
+    }
 
 
+    /**
+     * Create item_title
+     * Assigning a Title Tag to a Todo_Item
+     * @param item_id
+     * @param title_id
+     */
 
-    private void createItemTile(long item_id, long title_id)
+    private long createItemTile(long item_id, long title_id)
     {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_ITEM_ID, item_id);
+        values.put(KEY_TITLE_ID, title_id);
+        values.put(KEY_CREATED_AT, getDateTime());
+
+        return db.insert(TABLE_ITEM_TITLE, null, values);
+    }
+
+    /**
+     * UPDATING an Item Title
+     * It will remove the tag assigned to an Item
+     * @param id
+     * @param title_id
+     * @return
+     */
+    public int updateContentTitle(long id, long title_id){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_TITLE_ID, title_id);
+
+        // updating row
+        return db.update(TABLE_ITEM, values, KEY_ID + " = ?",
+                new String[] { String.valueOf(id) });
+    }
+
+    /**
+     * Closing database
+     */
+    public void closeDB() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        if (db != null && db.isOpen())
+            db.close();
     }
 
     private String getDateTime()
